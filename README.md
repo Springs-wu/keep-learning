@@ -1,5 +1,5 @@
 # 目录
-+ [Java基础](https://github.com/Springs-wu/keep-learning/edit/master/README.md#Java基础)
++ [Java基础](https://github.com/Springs-wu/keep-learning/blob/master/README.md#java%E5%9F%BA%E7%A1%80)
    + 基础知识
    + 集合
    + 多线程
