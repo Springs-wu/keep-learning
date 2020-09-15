@@ -1,5 +1,5 @@
 # 目录
-+ Java基础
++ [Java基础](https://github.com/Springs-wu/keep-learning/edit/master/README.md#Java基础)
    + 基础知识
    + 集合
    + 多线程
@@ -25,10 +25,10 @@
    + mybatis
    
 # Java基础
-**基础知识**
+### 基础知识
 
-**集合**
+### 集合
 
-**多线程**
+### 多线程
 
-**jvm**
+### jvm
