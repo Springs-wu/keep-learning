@@ -50,6 +50,7 @@
 
 package leetcode.editor.cn;
 
+import java.util.ArrayList;
 import java.util.List;
 
 //Java: 复原IP地址
@@ -57,14 +58,62 @@ import java.util.List;
 public class P93RestoreIpAddresses{
     public static void main(String[] args){
         Solution solution = new P93RestoreIpAddresses().new Solution();
+        List<String> strings = solution.restoreIpAddresses("101023");
     }
     //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
-    public List<String> restoreIpAddresses(String s) {
-        // 即把String拆成4个数字，不含前导0 且在0到255之间
+        List<List<String>> lists = new ArrayList<>();
 
+        public List<String> restoreIpAddresses(String s) {
+            if (s.length() == 0 || s.length() < 4) {
+                return new ArrayList<>();
+            }
+            // 即把String拆成4个数字，不含前导0 且在0到255之间
+            char[] chars = s.toCharArray();
+            List<String> res = new ArrayList<>();
+            getIp(res, chars, 0);
+            List<String> result = new ArrayList<>();
+            for (List<String> list : lists) {
+                StringBuilder sb = new StringBuilder();
+                for (String s1 : list) {
+                    sb.append(s1).append(".");
+                }
+                sb.deleteCharAt(sb.length() - 1);
+                result.add(sb.toString());
+            }
+            return result;
+        }
+
+        private void getIp(List<String> res, char[] chars, int i) {
+            for (int j = i ; j < chars.length; j++) {
+                String str = "";
+                for (int k = i; k <= j; k++) {
+                    str += String.valueOf(chars[k]);
+                }
+                if (isEffective(str)) {
+                    res.add(str);
+                    if (res.size() == 4) {
+                        if (i == chars.length-1) {
+                            lists.add(res);
+                            return;
+                        }
+                        res.remove(3);
+                        continue;
+                    }
+                    getIp(res, chars, j + 1);
+                    res.remove(res.size() - 1);
+                }
+            }
+        }
+
+        private boolean isEffective(String s) {
+            if (s.length() > 1 && s.startsWith("0")) {
+                return false;
+            }
+            int cha = Integer.parseInt(s);
+            return cha >= 0 && cha <= 255;
+        }
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }
