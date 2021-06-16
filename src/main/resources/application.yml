@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: common
+  application:
+    name: keep-learning
+
+server:
+  port: 8080
+
