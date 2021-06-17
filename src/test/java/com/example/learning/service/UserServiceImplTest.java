@@ -1,24 +1,33 @@
 package com.example.learning.service;
 
-import com.alibaba.fastjson.JSON;
 import com.example.learning.BaseApplicationTest;
+import com.example.learning.helper.RedisHelper;
+import lombok.Data;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 
 public class UserServiceImplTest extends BaseApplicationTest {
 
     @Autowired
-    private RedisTemplate<String, Object> redisTemplate;
+    private RedisHelper redisHelper;
 
     @Test
-    public void setRedisValue() {
-        char[] a = new char[2*1024];
-        String s = JSON.toJSONString(a);
-        redisTemplate.opsForValue().set("user", s);
+    public void setStringValue() {
+        redisHelper.set("user1", "springs");
+        System.out.println(redisHelper.get("user1"));
     }
 
-    private class User
+    @Test
+    public void setObjectValue() {
+        User user = new User();
+        user.setName("springs");
+        user.setAge(18);
+        redisHelper.set("user2", user);
+        System.out.println(redisHelper.get("user2"));
+    }
+
+    @Data
+    private static class User
     {
         private String name;
 

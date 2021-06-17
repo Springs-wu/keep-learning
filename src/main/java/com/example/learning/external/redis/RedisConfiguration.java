@@ -1,4 +1,4 @@
-package com.example.learning.configuration;
+package com.example.learning.external.redis;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
