@@ -2,7 +2,7 @@ package com.example.learning.service;
 
 import com.example.learning.BaseApplicationTest;
 import com.example.learning.helper.RedisHelper;
-import lombok.Data;
+import lombok.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
