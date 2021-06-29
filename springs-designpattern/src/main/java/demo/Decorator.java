@@ -1,4 +1,4 @@
-package Impl.designPattern;
+package demo;
 
 /**
  * 装饰器
@@ -12,12 +12,10 @@ public class Decorator {
 
     private static class ConcreteComponent implements Component
     {
-
         @Override
         public String descript() {
             return "ConcreteComponent";
         }
-
         @Override
         public double cost() {
             return 0.99;
@@ -30,7 +28,6 @@ public class Decorator {
         public String descript() {
             return "";
         }
-
         @Override
         public double cost() {
             return 0;

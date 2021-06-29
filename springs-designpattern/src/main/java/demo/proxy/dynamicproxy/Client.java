@@ -1,4 +1,4 @@
-package Impl.designPattern.proxy.dynamicproxy;
+package demo.proxy.dynamicproxy;
 
 public class Client {
     public static void main(String[] args) {

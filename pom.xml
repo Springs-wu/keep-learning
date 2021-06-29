@@ -8,6 +8,7 @@
         <module>springs-server</module>
         <module>springs-algorithm</module>
         <module>springs-thread</module>
+        <module>springs-spring</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -64,6 +65,7 @@
             <artifactId>jol-core</artifactId>
             <version>0.9</version>
         </dependency>
+
     </dependencies>
 
     <build>

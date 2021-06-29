@@ -1,4 +1,4 @@
-package Impl.designPattern.proxy.dynamicproxy;
+package demo.proxy.dynamicproxy;
 
 public interface UserService
 {

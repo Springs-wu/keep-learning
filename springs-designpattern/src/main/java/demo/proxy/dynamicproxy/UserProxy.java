@@ -1,4 +1,4 @@
-package Impl.designPattern.proxy.dynamicproxy;
+package demo.proxy.dynamicproxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -6,7 +6,7 @@ import java.lang.reflect.Proxy;
 
 public class UserProxy implements InvocationHandler
 {
-    private UserService userService;
+    private demo.proxy.dynamicproxy.UserService userService;
 
     public void setUserService(UserService userService) {
         this.userService = userService;

@@ -1,4 +1,4 @@
-package Impl.threadPackage;
+package demo;
 
 import java.util.concurrent.locks.ReentrantLock;
 

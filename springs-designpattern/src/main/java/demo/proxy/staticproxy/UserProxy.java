@@ -1,4 +1,4 @@
-package Impl.designPattern.proxy.staticproxy;
+package demo.proxy.staticproxy;
 
 public class UserProxy implements UserService
 {

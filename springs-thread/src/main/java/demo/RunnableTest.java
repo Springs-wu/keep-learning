@@ -1,4 +1,4 @@
-package Impl.threadPackage;
+package demo;
 
 public class RunnableTest implements Runnable {
 

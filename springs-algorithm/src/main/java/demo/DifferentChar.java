@@ -1,4 +1,4 @@
-package Impl.algorithm;
+package demo;
 
 /**
  * 校验是否有重复字符

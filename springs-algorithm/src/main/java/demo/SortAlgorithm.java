@@ -1,4 +1,4 @@
-package Impl.algorithm;
+package demo;
 
 public class SortAlgorithm {
     public static void main(String[] args) {

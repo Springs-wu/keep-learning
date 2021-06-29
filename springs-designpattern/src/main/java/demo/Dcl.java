@@ -1,4 +1,4 @@
-package Impl.designPattern;
+package demo;
 
 public class Dcl {
     private Dcl() {

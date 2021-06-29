@@ -1,4 +1,4 @@
-package Impl.threadPackage;
+package demo;
 
 public class ThreadCreate extends Thread {
     @Override
