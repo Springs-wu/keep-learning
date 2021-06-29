@@ -1,4 +1,4 @@
-package com.example.learning.DesignPattern;
+package demo;
 
 /**
  * chain
